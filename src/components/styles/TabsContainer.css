@@ -1,0 +1,19 @@
+.tabscontainer{
+    height: 50vh;
+    width: 42vw;
+    margin-top: 2%;
+    display: flex;
+    margin-left: -0.5%;
+  
+}
+.tabpanels{
+    display: flex;
+    margin-left:-38%;
+    text-align: left;
+    padding-left: 30%;
+    margin-top: 3%;
+    overflow-x: hidden;
+    width: 45.4vw;
+
+  
+}

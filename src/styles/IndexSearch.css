@@ -1,0 +1,59 @@
+.indexpage{
+    height: 590px;
+ width: 800px;
+    display: flex;
+   
+border: 0.5px solid grey;
+}
+
+.btn1{
+    text-align: center;
+    margin-top: -2%;
+    width: 7%;
+     position: absolute;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+text-transform: lowercase;
+    background-color:#90B2D8 ;
+    color: white;
+
+}
+.IndexTablecontainer{
+    position: "absolute";
+            margin-top: 26%; 
+}
+.btn2{
+
+    text-align: center;
+    margin-top: -2%;
+    width: 7%;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  text-transform: lowercase;
+      background-color:#90B2D8 ;
+   margin-left: 7%;
+   color: white;
+}
+.btn3{
+
+color: white;
+    text-align: center;
+    margin-top: -2%;
+    width: 7%;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  text-transform: lowercase;
+      background-color:#90B2D8 ;
+      margin-left: 14%;
+   
+
+}
+.drugcontainer{
+   position:absolute;
+
+margin-top: 4%;
+
+}  
+    

@@ -1,0 +1,25 @@
+.TabularContainer{
+
+display: flex;
+height:88vh ;
+width: 42vw;
+background-color: white;
+border: 0.5px solid grey;
+
+}
+
+.codedetails{
+    
+    height: 20vh;
+    width: 55vw;
+    margin-top: 10%;
+    margin-left: -13%;
+ border: none;
+}
+.codeHead{
+height: 3vh;
+width: 42vw;
+
+
+
+}

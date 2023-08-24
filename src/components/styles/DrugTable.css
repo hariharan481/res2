@@ -1,0 +1,25 @@
+.pagincontainer{
+
+display: flex;
+margin-top:25%;
+text-align: left;
+    height: 2vh;
+    width: 100%;
+
+
+
+}
+.table{
+  
+    margin-top: -25%;
+    width: 50vw;
+}
+.drugcontainer{
+ 
+
+width: 50vw;
+height: 4vh;
+margin-top: 10%;
+
+
+}

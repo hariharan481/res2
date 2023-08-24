@@ -1,0 +1,75 @@
+.neoplasmpagincontainer{
+    height: 3%;
+          width: 100%;
+          text-align: left;
+        margin-left: 5%;
+        margin-top: 25%;
+}
+.tablecontainer{
+    margin-top: 6%;
+    display: flex;
+    width: 830px;
+    margin-left: -112%;
+    overflow-y:scroll;
+}
+.tablehead1{
+    width: 100px;
+    height: 20%,   
+}
+
+.tabshead2{
+
+     width: 120px;
+      height: 4px;
+     margin-top: 1px
+}
+
+.type1{
+    background-color: #C8E2DD;
+    width: 190px;
+    text-align: center;
+    height: 37px;
+
+}
+.typ2{
+    background-color: #C8E2DD;
+    width: 180px;
+    text-align: center;
+    height: 37px;
+}
+.box1{
+
+}
+.box2{
+    height: 30px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid black;
+    height: 35px;
+
+}
+.box3{
+
+
+    height: 30px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid black;
+        height: 35px;
+
+}
+
+.Tablehead3{
+
+    height: 20px;
+     border: 1px solid grey 
+
+
+    
+}  
+
+.tablewrapper{
+    
+    
+ height: 5px 
+}

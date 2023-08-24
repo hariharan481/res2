@@ -1,0 +1,109 @@
+import {
+  Box,
+  Popover,
+  List,
+  ListItem,
+  TextField,
+  Autocomplete,
+} from "@mui/material";
+import React, { useEffect, useState } from "react";
+import SearchIcon from "@mui/icons-material/Search";
+import "../App.css";
+import axios from "axios";
+
+const Search1 = () => {
+  const [result1, setResult1] = useState([]);
+
+  const [result, setResult] = useState([]);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [open, setOpen] = React.useState(false);
+  const [first, setFirst] = useState("");
+  const [word, setWord] = useState("");
+
+  function handleChange(e) {
+    setWord(e.target.value);
+  }
+
+  const handlePopoverOpen = () => {
+    setAnchorEl(true);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(false);
+  };
+
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const response = await fetch(`/codes/title/${word}`, {
+          mode: "no-cors",
+        });
+        if (response.ok) {
+          const data = await response.json();
+          setResult1(data.levelTerms);
+          setResult(data.mainTerms);
+        } else {
+          console.error("Failed to fetch data");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+    fetchBooks();
+  }, [word]);
+
+  const options = [
+    ...result1.map((item) => ({ ...item, source: "Level Term" })),
+    ...result.map((item1) => ({ ...item1, source: "Main Term" })),
+  ];
+
+  return (
+    <Box sx={{ height: "80px", position: "static", marginTop: "-5px" }}>
+      <Box
+        sx={{ margin: "auto", color: "black", mt: "20px" }}
+        direction="row"
+        gap={5}
+      >
+        <Autocomplete
+          id="search-autocomplete"
+          options={options}
+          getOptionLabel={(item) =>
+            `${item.title} (${item.source}) ${item.level}  ${item.seealso}`
+          }
+          open={Boolean(anchorEl)}
+          onOpen={handlePopoverOpen}
+          onClose={handlePopoverClose}
+          inputValue={word}
+          onInputChange={(_, value) => {
+            setWord(value);
+            if (value.length === 0) {
+              if (open) setOpen(false);
+            } else {
+              if (!open) setOpen(true);
+            }
+          }}
+          renderInput={(params) => (
+            <TextField
+              sx={{
+                "& input": {
+                  height: "5px",
+                },
+              }}
+              {...params}
+              onChange={handleChange}
+              placeholder="Search for code"
+            />
+          )}
+          renderOption={(props, item) => (
+            <ListItem {...props}>
+              {item.title} ({item.source}) {item.level}
+              {item.seealso}
+            </ListItem>
+          )}
+        />
+      </Box>
+    </Box>
+  );
+};
+
+export default Search1;

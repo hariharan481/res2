@@ -1,0 +1,68 @@
+.Tabularsearch{
+            height: 590px;
+            width: 700px;
+            display: flex;
+            background-color: white;
+            border: 0.5px solid grey;
+}
+.tabhead{
+    
+    height: 0px;
+    width: 50%;
+margin-top: 1%;
+    margin-left: 6px;
+
+
+}
+.codedetails{
+
+
+margin-right: 2%;
+
+}
+.tabshead{
+    width: 100%;
+}
+.codedetails{
+ 
+  
+    border-bottom: 0.5px solid grey;
+    width: 120%;
+    
+    margin-left: -33%;
+}
+.codeconatiner{
+ 
+    margin-right:10% ;
+
+}
+.tabscontainer{
+    height: 60%;
+    width: 112%;
+
+
+
+}
+.tabswrapper{
+height: 10%;
+width: 107%;
+font-size: 13px;
+font-family: sans-serif;
+color: black;
+background: linear-gradient(to right, #E9F8FF,#90B2D8 , #C1E3FF);    
+margin-top: 5%;
+margin-left: -31%;
+
+}
+
+
+  .tabpanels{
+
+   
+    height: 50%;
+    width: 82%;
+    overflow-y: scroll;
+    padding-left: 5%;
+
+
+  }
